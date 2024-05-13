@@ -53,3 +53,22 @@ for i in range(2, 100, 2):
     print(i)
 ```
 
+### How big is the room?
+
+Build a program that asks the user to enter the length and width of a  room, in meters, then prints the room's area in both square meters and  square feet.
+
+*Note*: 1 square meter == 10.7639 square feet
+
+```python
+# ask for user input
+l = float(input('Enter the length of the room in meters: '))
+w = float(input('Enter the width of the room in meters: '))
+
+# calculate area
+area = l * w
+
+# print result
+print(f'Area of the room (meters): {area} square meters.')
+print(f'Area of the room (sq. ft): {area * 10.7639} square feet.')
+```
+
