@@ -13,3 +13,18 @@ def greetings(l, d):
     return f'Hello, {name}! Nice to have a {job} around.'
 ```
 
+### Greeting a user
+
+Write a program that asks for user's name, then greets the user. If the user appends a `!` to their name, the computer will yell the greeting (print it using all uppercase).
+
+```python
+name = input("What's your name? ")
+
+# if ! is in input
+if '!' in name:
+    # print message and capitalize name
+    print(f'HELLO {name.upper()} WHY ARE WE YELLING?')
+else:
+    print(f'Hello {name}.')
+```
+
