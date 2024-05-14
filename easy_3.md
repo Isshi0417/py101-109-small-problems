@@ -60,3 +60,13 @@ def stringy(n):
     return string
 ```
 
+### Right Triangles
+
+Write a function that takes a positive integer, `n`, as an argument and prints a right triangle whose sides each have `n` stars. The hypotenuse of the triangle (diagonal side in the images below) should have one end at the lower-left of the triangle, and the other end at the upper-right.
+
+```python
+def triangle(n):
+    for i in range(n):
+        print(f'{' ' * (n - i)}{'*' * i}')
+```
+
