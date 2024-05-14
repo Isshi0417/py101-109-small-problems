@@ -37,3 +37,16 @@ def multiply(n1, n2):
     return n1 * n2
 ```
 
+### Squaring an Argument
+
+Using the `multiply` function from the "Multiplying Two Numbers" exercise, write a function that computes the square of its argument (the square is the result of multiplying a number by itself).
+
+```python
+def multiply(n1, n2):
+    return n1 * n2
+
+def square(n):
+    # invoke multiply() with same numbers
+    return multiply(n, n)
+```
+
