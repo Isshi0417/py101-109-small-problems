@@ -158,3 +158,15 @@ def center_of(s):
         return s[position]
 ```
 
+### Always Return Negative
+
+Write a function that takes a number as an argument. If the argument is a positive number, return the negative of that number. If the argument is a negative number, return it as-is.
+
+```python
+def negative(n):
+    if n < 0:
+        return n
+    else:
+        return -n
+```
+
