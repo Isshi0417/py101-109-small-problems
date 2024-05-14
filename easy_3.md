@@ -108,3 +108,35 @@ def twice(n):
         return n * 2
 ```
 
+### Clean up the words
+
+Given a string that consists of some words and an assortment of non-alphabetic characters, write a function that returns that string with all of the non-alphabetic characters replaced by spaces. If one or more non-alphabetic characters occur in a row, you should only have one space in the result (i.e., the result string should never have consecutive spaces).
+
+```python
+def clean_up(string):
+    space_string = ""
+    clean_string = ""
+    
+    # for each letter in string
+    for letter in string:
+        # if letter is an alphabet
+        if letter.isalpha():
+            space_string += letter
+        elif not letter.isalpha():
+            space_string += " "
+    
+    # for each index in space_string
+    for index in range(len(space_string)):
+        # always add first element
+        if index == 0:
+            clean_string += space_string[index]
+        # if element is a duplicate as the previous element
+        elif space_string[index] == space_string[index - 1]:
+            # do nothing
+            continue
+        else:
+            clean_string += space_string[index]
+    
+    return clean_string
+```
+
