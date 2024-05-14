@@ -98,3 +98,18 @@ def xor(a1, a2):
     return False
 ```
 
+### Odd Lists
+
+Write a function that returns a list that contains every other element of a list that is passed in as an argument. The values in the returned list should be those values that are in the 1st, 3rd, 5th, and so on element of the argument list.
+
+```python
+def oddities(full_list):
+    # initialize empty list
+    odd_list = []
+    # each even index (odd position)
+    for index in range(0, len(full_list), 2):
+        # append to empty list
+        odd_list.append(full_list[index])
+    return odd_list
+```
+
