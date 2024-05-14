@@ -118,7 +118,7 @@ else:
 
 ### Short Long Short
 
-Write a function that takes two strings as arguments, determines the length of the two strings, and then returns the result of concatenating the shorter string, the longer string, and the shorter string once again. You may assume that the strings are of different lenghts.
+Write a function that takes two strings as arguments, determines the length of the two strings, and then returns the result of concatenating the shorter string, the longer string, and the shorter string once again. You may assume that the strings are of different lengths.
 
 ```python
 def short_long_short(s1, s2):
@@ -135,7 +135,7 @@ Write a function that takes any year greater than `0` as input and returns `True
 
 For simplicity, this exercise assumes that the Gregorian calendar has been in continuous use since the year 1. We'll address that assumption in the next exercise that follows this one.
 
-To determine whether a given year is a leap year, use the rules of the Gregorian caldendar:
+To determine whether a given year is a leap year, use the rules of the Gregorian calendar:
 
 - If the year is divisible by 400, it **is** a leap year.
 - If the year is divisible by 100 but not by 400, it **is not** a leap year.
@@ -156,5 +156,32 @@ def is_leap_year(year):
             return False
     else: 
         return False
+```
+
+### Leap Years (Part 2)
+
+In the previous exercise, we assumed that the Gregorian calendar has been in continuous use since the year 1. However, the Gregorian calendar wasn't adopted until much later; prior to that, much of the world used the Julian calendar, which observed leap year every 4 years. 
+
+In 1752, England, Ireland, and the British colonies all switched to the Gregorian calendar. Update the function from the previous exercise so it uses the Julian calendar prior to 1752, and the Gregorian calendar starting in 1752.
+
+```python
+def is_leap_year(year):
+    # Gregorian calendar
+    if year > 1752:
+        if year % 400 == 0:
+            return True
+        elif year % 4 == 0:
+            if year % 100 != 0:
+                return True
+            else:
+                return False
+        else: 
+            return False
+    # Julian calendar
+    else:
+        if year % 4 == 0:
+            return True
+        else:
+            return False
 ```
 
