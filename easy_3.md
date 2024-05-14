@@ -87,3 +87,24 @@ print(f'The {adjective} {noun} {verb}s {adjective} over the lazy dog.')
 print(f'The {noun} {adjective} {verb}s up to Joe\'s blue turtle.')
 ```
 
+### Double Doubles
+
+A double number is an even-length number whose left-side digits are exactly the same as its right-side digits. For example, `44`, `3333`, `103103`, and `7676` are all double numbers, where as `444`, `334433`, and `107` are not.
+
+Write a function that returns the number provided as an argument multiplied by two, unless the argument is a double number. If the argument is a double number, return the double number as-is.
+
+```python
+def twice(n):
+    string = str(n)
+    if len(string) % 2 == 0:
+        # determine midpoint
+        halfway = len(string) // 2
+        # compare string value cut at midpoint
+        if string[:halfway] == string[halfway:]:
+            return n
+        else:
+            return n * 2
+    else:
+        return n * 2
+```
+
