@@ -85,3 +85,16 @@ def penultimate(s):
     return l[-2]
 ```
 
+### Exclusive Or
+
+The `or` operator returns a truthy value if either or both of its operands are truthy, a falsy value if both operands are falsy. The `and` operator returns a truthy value if both of its operands are truthy, and a falsy if either operand is falsy. This works great until you need only one of two conditions to be truthy, the so-called **exclusive or**, also known as **xor** (pronounced "ECKS-or").
+
+In this exercise, you will write an `xor` function that takes two arguments, and returns `True` if exactly one of its arguments is truthy, `False` otherwise.
+
+```python
+def xor(a1, a2):
+    if (a1 and not a2) or (not a1 and a2):
+        return True
+    return False
+```
+
