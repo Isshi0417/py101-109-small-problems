@@ -43,3 +43,20 @@ def print_in_box(string):
     print(box)
 ```
 
+### Strings Strings
+
+Write a function that takes one argument, a positive integer, and returns a string of alternating `'1'`s and `'0'`s, always starting with a `'1'`. The length of the string should match the given integer.
+
+```python
+def stringy(n):
+    string = ''
+    # foe each number in n
+    for i in range(n):
+        # if number is odd
+        if i % 2 == 1:
+            string += '0'
+        else:
+            string += '1'
+    return string
+```
+
