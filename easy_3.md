@@ -140,3 +140,39 @@ def clean_up(string):
     return clean_string
 ```
 
+### What Century is That?
+
+Write a function that takes a year as input and returns the century. The return value should be a string that begins with the century number, and ends with `st`, `nd`, `rd`, or `th` as appropriate for that number.
+
+New centuries begin in years that end with `01`. So, the years 1901 - 2000 compromise the 20th century.
+
+```python
+def century(year):
+    decade = (year // 100) + 1
+    
+    # if year is ~000
+    if year % 100 == 0:
+        decade -= 1
+        
+    tens = decade % 100    
+    ones = decade % 10
+    
+    match tens:
+        case 11:
+            return f"{decade}th"
+        case 12:
+            return f"{decade}th"
+        case 13:
+            return f"{decade}th"
+    
+    match ones:
+        case 1:
+            return f"{decade}st"
+        case 2:
+            return f"{decade}nd"
+        case 3:
+            return f"{decade}rd"
+        case _:
+            return f"{decade}th"
+```
+
