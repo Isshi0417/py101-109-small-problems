@@ -129,3 +129,32 @@ def short_long_short(s1, s2):
         return s2 + s1 + s2
 ```
 
+### Leap Years (Part 1)
+
+Write a function that takes any year greater than `0` as input and returns `True` if the year is a leap year, or `False` if it is not.
+
+For simplicity, this exercise assumes that the Gregorian calendar has been in continuous use since the year 1. We'll address that assumption in the next exercise that follows this one.
+
+To determine whether a given year is a leap year, use the rules of the Gregorian caldendar:
+
+- If the year is divisible by 400, it **is** a leap year.
+- If the year is divisible by 100 but not by 400, it **is not** a leap year.
+- If the year is divisible by 4 but not by 100, it **is** a leap year.
+- All other years **are not** leap years.
+
+```python
+def is_leap_year(year):
+    # if year is divisible by 400
+    if year % 400 == 0:
+        return True
+    # if year is divisible by 4
+    elif year % 4 == 0:
+        # if year is not divisible by 100
+        if year % 100 != 0:
+            return True
+        else:
+            return False
+    else: 
+        return False
+```
+
