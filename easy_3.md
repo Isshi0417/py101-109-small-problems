@@ -108,6 +108,38 @@ def twice(n):
         return n * 2
 ```
 
+### Grade Book
+
+Write a function that determines the mean (average) of the three scores passed to it, and returns the letter associated with that grade.
+
+Numerical score letter grade list:
+
+- 90 <= score <= 100: 'A'
+- 80 <= score < 90: 'B'
+- 70 <= score , 80: 'C'
+- 60 <= score < 70: 'D'
+- 0 <= score < 60: 'F'
+
+Tested values are all between `0` and `100`. There is no need to check for negative values or values greater than 100.
+
+```python
+def get_grade(n1, n2, n3):
+    average = (n1 + n2 + n3) / 3
+    
+    if average >= 90 and average <= 100:
+        return "A"
+    elif average >= 80 and average <= 90:
+        return "B"
+    elif average >= 70 and average <= 80:
+        return "C"
+    elif average >= 60 and average <= 70:
+        return "D"
+    else:
+        return "F"
+```
+
+
+
 ### Clean up the words
 
 Given a string that consists of some words and an assortment of non-alphabetic characters, write a function that returns that string with all of the non-alphabetic characters replaced by spaces. If one or more non-alphabetic characters occur in a row, you should only have one space in the result (i.e., the result string should never have consecutive spaces).
