@@ -69,3 +69,19 @@ print(f'{n1} % {n2} = {n1 % n2}')
 print(f'{n1} ** {n2} = {n1 ** n2}')
 ```
 
+### The End is Near But Not Here
+
+Write a function that returns the next to last word in the string argument.
+
+Words are any sequence of non-blank characters.
+
+You may assume that the input string will always contain at least two words.
+
+```python
+def penultimate(s):
+    # split string into list
+    l = s.split()
+    # return the second last element from list
+    return l[-2]
+```
+
