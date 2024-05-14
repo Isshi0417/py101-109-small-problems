@@ -25,3 +25,21 @@ def crunch(string):
     return crunched
 ```
 
+### Bannerizer
+
+Write a function that takes a short line of text and prints it within a box.
+
+```python
+def print_in_box(string):
+    width = len(string)
+    box_line = '-'
+    box = f'''
+    +{box_line * (width + 2)}+
+    | {' ' * width} |
+    | {string} |
+    | {' ' * width} |
+    +{box_line * (width + 2)}+
+    '''
+    print(box)
+```
+
