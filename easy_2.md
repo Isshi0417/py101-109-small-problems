@@ -142,3 +142,19 @@ print(f"\nIt's {year}. You will retire in {retirement_year}.")
 print(f'You only have {retirement_age - age} years of work to go!')
 ```
 
+### Get Middle Character
+
+Write a function that takes a non-empty string argument and returns the middle character(s) of the string. If the string has an odd length, you should return exactly one character. If the string has an even length, you should return exactly two characters.
+
+```python
+def center_of(s):
+    # determine center position
+    position = len(s) // 2
+    # if length of s is even
+    if len(s) % 2 == 0:
+        # concatenate the middle point and the character before
+        return s[position - 1] + s[position]
+    else:
+        return s[position]
+```
+
